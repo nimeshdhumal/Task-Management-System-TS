@@ -18,6 +18,9 @@ class Comment extends Model<ICommentAttributes, ICommentAttributesCreation> {
     declare text: string;
     declare taskId: number;
     declare userId: number;
+    declare createdAt: Date;
+    declare updatedAt: Date;
+    declare deletedAt: Date;
 }
 
 Comment.init(

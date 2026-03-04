@@ -24,6 +24,9 @@ class Task extends Model<ITaskAttributes, ITaskAttributesCreation> {
     declare userId: number;
     declare priority: 'low' | 'medium' | 'high' | undefined;
     declare dueDate: Date | undefined;
+    declare createdAt: Date;
+    declare updatedAt: Date;
+    declare deletedAt: Date;
 }
 
 Task.init(

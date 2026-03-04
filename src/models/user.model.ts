@@ -20,6 +20,9 @@ class User extends Model<IUserAttributes, IUserCreationAttributes> {
     declare email: string;
     declare password: string;
     declare role: 'admin' | 'user';
+    declare createdAt: Date;
+    declare updatedAt: Date;
+    declare deletedAt: Date;
 }
 
 User.init(
