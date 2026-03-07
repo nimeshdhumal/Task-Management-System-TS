@@ -25,7 +25,7 @@ const validateRequest = (options: IValidationOptions) => {
         res.status(401).json({ message: error.message });
         return;
       }
-      req.headers = value;
+      Object.assign(req.headers, value);
     }
 
     if (options.query) {
@@ -34,7 +34,7 @@ const validateRequest = (options: IValidationOptions) => {
         res.status(400).json({ message: error.message });
         return;
       }
-      req.query = value;
+      Object.assign(req.query, value);
     }
 
     if (options.params) {
@@ -43,7 +43,7 @@ const validateRequest = (options: IValidationOptions) => {
         res.status(400).json({ message: error.message });
         return;
       }
-      req.params = value;
+      Object.assign(req.params, value);
     }
 
     next();

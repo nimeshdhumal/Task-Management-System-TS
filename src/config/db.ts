@@ -16,6 +16,4 @@ async function connection() {
     }
 }
 
-connection();
-
 export { sequelize, connection };
