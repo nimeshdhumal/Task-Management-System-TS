@@ -13,6 +13,8 @@ const buildActor = (req: Request): IActor => {
     id: Number(req.params.id),
     force: req.query.force as string,
     userRole: req.user.role,
+    status: req.query.status as string,
+    search: req.query.search as string
   };
 };
 

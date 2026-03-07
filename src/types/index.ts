@@ -29,7 +29,7 @@ export interface IComment {
     id: number,
     text: string,
     userId: number,
-    taskId:number,
+    taskId: number,
     createdAt: Date;
     updatedAt: Date;
 }
@@ -44,7 +44,9 @@ export interface IActor {
     sort: string,
     order: SortOrder,
     id: number,
-    force?: string
+    force?: string,
+    status?: string,
+    search?: string
 }
 
 export type IUserPublic = Omit<IUser, 'password'>;
